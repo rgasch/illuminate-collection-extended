@@ -75,3 +75,9 @@ test('can disable creation of recursive collection via create() method', functio
     $this->assertIsArray($collection->f);
     $this->assertEquals($collection->f['x'], 0);
 });
+
+test('dows throw exception when trying to retrieve non-existing element via __get method', function () use ($array) {
+    $array['f'] = [ 'x'=>0, 'y'=>1, 'z'=>2 ];
+    $collection = Collection::create($array, false);
+    $collection->noSuchElement;
+})->throws(\InvalidArgumentException::class);
