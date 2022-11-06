@@ -1,0 +1,43 @@
+{
+    "name": "rgasch/illuminate-collection-extended",
+    "description": "Extension class for Laravel's Collection class with some extra functionality.",
+    "keywords": ["collection", "framework", "illuminate", "laravel"],
+    "homepage": "https://github.com/rgasch/illuminate-collection-extended",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robert Gasch",
+            "email": "rgasch@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0"
+    },
+    "require-dev": {
+        "nunomaduro/larastan": "^2.2",
+        "pestphp/pest": "^1.16",
+        "pestphp/pest-plugin-laravel": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rgasch\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": false,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "prefer-stable": true
+}
