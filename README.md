@@ -4,7 +4,7 @@ that provides some extra functionality to the Collection class.
 
 ## Installation
 
-The preferred method of installation is via [Composer][]. Run the following
+The preferred method of installation is via Composer. Run the following
 command to install the package and add it as a requirement to your project's
 `composer.json`:
 
