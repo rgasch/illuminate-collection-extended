@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Rgasch\\": "src/"
+            "Rgasch\\Collection\\": "src/"
         }
     },
     "autoload-dev": {
