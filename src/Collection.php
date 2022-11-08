@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Rgasch;
+namespace Rgasch\Collection;
 
 use Illuminate\Support\Str;
 
