@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Collection as BaseCollection;
-use Rgasch\Collection;
+use Rgasch\Collection\Collection;
 
 $array = [];
 $start = 'a';
@@ -76,8 +76,20 @@ test('can disable creation of recursive collection via create() method', functio
     $this->assertEquals($collection->f['x'], 0);
 });
 
-test('dows throw exception when trying to retrieve non-existing element via __get method', function () use ($array) {
-    $array['f'] = [ 'x'=>0, 'y'=>1, 'z'=>2 ];
+test('does throw exception when trying to retrieve non-existing element via __get method', function () use ($array) {
     $collection = Collection::create($array, false);
     $collection->noSuchElement;
 })->throws(\InvalidArgumentException::class);
+
+test('can get/set field which matches a method name', function () {
+    $collection = Collection::create();
+    $collection->max = 12;
+    $this->assertEquals($collection->max, 12);
+
+});
+
+test('can call method which matches field name', function () use ($array) {
+    $collection = Collection::create($array);
+    $collection->max = -1;
+    $this->assertEquals($collection->max(), 4);
+});
