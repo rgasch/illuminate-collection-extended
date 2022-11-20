@@ -7,6 +7,9 @@ use Illuminate\Support\Str;
 
 /**
  * Wrapper for Laravel/Illuminate Collection class.
+ *
+ * @property \Rgasch\Collection\Collection $min
+ * @property \Rgasch\Collection\Collection $max
  */
 class Collection extends \Illuminate\Support\Collection
 {
